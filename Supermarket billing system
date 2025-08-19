@@ -5,24 +5,45 @@ class Main {
         float rice_price = 45.50f;
         int onion_price = 20;
     
-    int tomato_quantity = 5;
-    int rice_quantity = 2;
-    int onion_quantity = 5;
-    
-System.out.println("Total cost of tomato: " + tomato_price*tomato_quantity);
-System.out.println("Total cost of rice: "  + rice_price* rice_quantity);
-System.out.println("Total cost of onion: " + onion_price*onion_quantity);
-int tomato_total=tomato_price*tomato_quantity;
-float rice_total=rice_price* rice_quantity;
-int onion_total=onion_price*onion_quantity;
+        int tomato_quantity = 5;
+        int rice_quantity = 2;
+        int onion_quantity = 5;
+
+        int tomato_total=tomato_price*tomato_quantity;
+        float rice_total=rice_price* rice_quantity;
+        int onion_total=onion_price*onion_quantity;
+
+        System.out.println("Total cost of tomato: " + tomato_total);
+        System.out.println("Total cost of rice: "  + rice_total);
+        System.out.println("Total cost of onion: " + onion_total);
+
 float Grand_total=tomato_total+rice_total+onion_total;
 
 System.out.println("Grand total of the items:");
 System.out.println(Math.round(Grand_total));
 if (Grand_total>300){
 float dis = 0.20f;
-System.out.println("Discounted price:" + Math.round(Grand_total*dis));
+int discounted_price=Math.round(Grand_total*dis);
+
+System.out.println("Discounted price:" +discounted_price);
+float price_after=Grand_total-discounted_price;
+System.out.println("Price after discount:" +price_after);
 
 }
     }
 }
+
+O/P
+Total cost of tomato:180
+Total cost of rice:91.0
+Total cost of onion:100
+Grand total of the items:371
+Discounted price:74
+Price after discount:297.0
+
+
+
+
+
+
+
