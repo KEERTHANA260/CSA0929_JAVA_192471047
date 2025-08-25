@@ -1,0 +1,28 @@
+public class BinaryToOctalSuperSimple {
+    public static void main(String[] args) {
+        String binary = "101101";
+        
+        // Pad with zeros at front so length is multiple of 3
+        while (binary.length() % 3 != 0) {
+            binary = "0" + binary;
+        }
+        String octal = "";
+        for (int i = 0; i < binary.length(); i += 3) {
+            String threeBits = binary.substring(i, i + 3);
+            
+            // Convert 3 bits to decimal (octal digit)
+            int octDigit = 0;
+            if (threeBits.charAt(0) == '1') octDigit += 4;
+            if (threeBits.charAt(1) == '1') octDigit += 2;
+            if (threeBits.charAt(2) == '1') octDigit += 1;
+            octal += octDigit;
+        }
+
+        System.out.println("Octal: " + octal);
+    }
+}
+
+o/p
+Octal: 55
+
+
