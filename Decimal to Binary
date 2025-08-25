@@ -1,0 +1,23 @@
+public class DecimalToBinarySimple {
+    public static void main(String[] args) {
+        int decimalNumber = 42;  
+        String binary = "";
+
+        if (decimalNumber == 0) {
+            binary = "0";
+        }
+
+        while (decimalNumber > 0) {
+            int remainder = decimalNumber % 2;
+            binary = remainder + binary;  
+            decimalNumber = decimalNumber / 2;
+        }
+
+        System.out.println("Binary: " + binary);
+    }
+}
+
+O/P 
+Binary: 1010101
+
+
