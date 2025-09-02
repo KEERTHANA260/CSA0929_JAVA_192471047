@@ -25,3 +25,10 @@ public class FrequencySimpleNoBoolean {
         }
     }
 }
+
+O/P
+2 appears 3 times.
+5 appears 2 times.
+3 appears 3 times.
+8 appears 1 times.
+
